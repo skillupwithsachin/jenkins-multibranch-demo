@@ -4,17 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'My first build stage'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "My First Test stage"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "My First Deploy Stage"
+                echo 'Building a new laptop ...'
+                sh 'mkdir -p build'
+                sh 'touch build/computer.txt'
+                sh 'echo "Mainboard" >> build/computer.txt'
+                sh 'cat build/computer.txt'
+                sh 'echo "Display" >> build/computer.txt'
+                sh 'cat build/computer.txt'
+                sh 'echo "Keyboard" >> build/computer.txt'
+                sh 'cat build/computer.txt'
             }
         }
     }
