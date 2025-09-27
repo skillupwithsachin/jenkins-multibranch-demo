@@ -17,5 +17,10 @@ pipeline {
                 echo "My First Deploy Stage"
             }
         }
+        stage('Release') {
+            steps {
+                echo "My Frist Release Job"
+            }
+        }
     }
 }
